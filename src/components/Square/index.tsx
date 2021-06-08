@@ -7,7 +7,7 @@ interface SquareProps {
 }
 
 const Square:FC<SquareProps> = ({ value, onClick }) => (
-    <button style={styles.square} onClick={onClick}>
+    <button className={styles.square} onClick={onClick}>
         {value}
     </button>
 );

@@ -39,11 +39,18 @@ const Game: FC = () => {
         })        
     )
 
+    const reset = () => {
+        setHistory([Array(9).fill(null)])
+        setStepNumber(0)
+        setXisNext(true)
+    }
+
     return (
         <>
             <Board squares={history[stepNumber]} onClick={handleClick} />
-            <div style={styles.game}>
+            <div className={styles.game}>
                 <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+                <button style={{marginBottom: '10px'}} onClick={() => reset()}>restart</button>
                 {renderMoves()}
             </div>
         </>
