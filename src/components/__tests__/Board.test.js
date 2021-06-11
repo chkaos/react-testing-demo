@@ -7,11 +7,12 @@ const props = {
     onClick: null
 }
 
-beforeEach(() => {
-    render(<Board {...props}/>);
-});
-
 describe("Component Board tests", () => { 
+
+    beforeEach(() => {
+        render(<Board {...props}/>);
+    });
+    
     test('Board renders correct number of squares', () => {    
         
         const btnElementArray = screen.getAllByRole('button');

@@ -53,8 +53,8 @@ const Game: FC = () => {
         <>
             <Board squares={history[stepNumber]} onClick={handleClick} />
             <div style={style}>
-                <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
-                <button style={{marginBottom: '10px'}} onClick={() => reset()}>restart</button>
+                <p className='game-status'>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+                <button id={'reset'} style={{marginBottom: '10px'}} onClick={() => reset()}>restart</button>
                 {renderMoves()}
             </div>
         </>

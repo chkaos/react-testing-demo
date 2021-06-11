@@ -23,7 +23,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@umijs/test": "^3.4.25",
-    "babel-jest": "^27.0.2",
+    "puppeteer": "^10.0.0",
     "ts-jest": "^27.0.3"
   },
   "browserslist": {

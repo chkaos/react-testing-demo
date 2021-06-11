@@ -10,7 +10,7 @@ const style = {
 }
 
 interface SquareProps {
-    value: string
+    value: string;
     onClick: (e: MouseEvent<HTMLElement>) => void
 }
 

@@ -11,7 +11,7 @@ const style = {
 }
 
 interface BoardProps {
-    squares: SquaresArray
+    squares: SquaresArray;
     onClick: any
 }
 
