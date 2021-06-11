@@ -1,6 +1,9 @@
 import type { SquaresArray } from "./types"
 
-export function calculateWinner(squares: SquaresArray) {
+export function calculateWinner(squares: SquaresArray): string | null {
+  // eslint-disable-next-line
+  if(squares.length !== 9) throw 'Invalid Squares!'
+
   const lines = [
     [0, 1, 2],
     [3, 4, 5],

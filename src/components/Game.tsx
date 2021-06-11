@@ -1,8 +1,12 @@
 import type { FC } from 'react';
 import { useState } from 'react';
-import { calculateWinner } from '../helpers';
-import styles from './style.css'
-import Board from '../Board';
+import { calculateWinner } from './helpers';
+import Board from './Board';
+
+const style = {
+    width: "200px",
+    margin: "20px auto"
+}
 
 const Game: FC = () => {
     const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -48,7 +52,7 @@ const Game: FC = () => {
     return (
         <>
             <Board squares={history[stepNumber]} onClick={handleClick} />
-            <div className={styles.game}>
+            <div style={style}>
                 <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
                 <button style={{marginBottom: '10px'}} onClick={() => reset()}>restart</button>
                 {renderMoves()}

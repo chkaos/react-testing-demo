@@ -3,4 +3,4 @@ export enum SquareValue {
     O = "O"
 }
 
-export type SquaresArray = Array<SquareValue>
+export type SquaresArray = Array<SquareValue, 9>
